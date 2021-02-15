@@ -48,4 +48,4 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 - **Social Choice with Variable Populations**. PRIMA-20, Nov. 2020
 - **Algorithmic Game Theory for Designing Voting Rules**. FIT 2020 Special Session “Computational Approach for Social Choice,” Sep. 2020 (in Japanese)
 - **Market Design for Resource Exchange**. Interdisciplinary Workshop on Swarm Mathematics (A Scientific Seminar Organized by TOYOTA), Nov. 2018 (in Japanese)
-- **Fairness and False-name-proofness in Randomized Allocation of a Divisible Good**. Dagstuhl Seminar 16232: Fair Division, Jun 2016
+- **Fairness and False-name-proofness in Randomized Allocation of a Divisible Good**. Dagstuhl Seminar 16232: Fair Division, Jun. 2016
