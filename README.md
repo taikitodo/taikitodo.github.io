@@ -12,7 +12,7 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 
 # News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
-- I'm participating in [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) of Kyushu University as a trainee. (Aug. 1, 2020)
+- I'm participating in [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) as a trainee. (Aug. 1, 2020)
 - [A new JSPS research project on multi-agent optimization](https://agent.inf.kyushu-u.ac.jp/20H00587/) has just been launched. (Apr. 1, 2020)
 
 - - -
