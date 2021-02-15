@@ -37,11 +37,15 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 
 # Selected Publications
 To see a full list of my publications, please refer to [my DBLP entry](https://dblp.org/pid/67/7117.html) and/or [my Google Scholar page](https://scholar.google.com/citations?user=aakxNAIAAAAJ):
-- Mechanism Design for Housing Markets over Social Networks. AAMAS-21. (with Takehiro Kawasaki, Ryoji Wada, and Makoto Yokoo)
-- Strategy-proof and non-wasteful multi-unit auction via social network. AAAI-20. (with Takehiro Kawasaki, Nathanael Barrot, Seiji Takanashi, and Makoto Yokoo)
-- A Complexity Approach for Core-Selecting Exchange under Conditionally Lexicographic Preferences. Journal of Artificial Intelligence Research (JAIR), 2018. (with Julien Lesca, Etsushi Fujita, Akihisa Sonoda, and Makoto Yokoo)
-- Service Exchange Problem. IJCAI-ECAI-18. (with Julien Lesca)
-- Facility Location Game with Fractional Preferences. AAAI-18. (with Ken Fong, Minming Li, Pinyan Lu, and Makoto Yokoo)
+- **Mechanism Design for Housing Markets over Social Networks**. AAMAS-21. (with Takehiro Kawasaki, Ryoji Wada, and Makoto Yokoo)
+- **Strategy-proof and non-wasteful multi-unit auction via social network**. AAAI-20. (with Takehiro Kawasaki, Nathanael Barrot, Seiji Takanashi, and Makoto Yokoo)
+- **A Complexity Approach for Core-Selecting Exchange under Conditionally Lexicographic Preferences**. Journal of Artificial Intelligence Research (JAIR), 2018. (with Julien Lesca, Etsushi Fujita, Akihisa Sonoda, and Makoto Yokoo)
+- **Service Exchange Problem**. IJCAI-ECAI-18. (with Julien Lesca)
+- **Facility Location Game with Fractional Preferences**. AAAI-18. (with Ken Fong, Minming Li, Pinyan Lu, and Makoto Yokoo)
 
-# Selected Talks
-- TBA
+# Selected Invited Talks
+- **Mechanism Design with Uncertainty**. IJCAI-PRICAI-20 Early Career Spotlight Talk, Jan. 2021
+- **Social Choice with Variable Populations**. PRIMA-20, Nov. 2020
+- **Algorithmic Game Theory for Designing Voting Rules**. FIT 2020 Special Session “Computational Approach for Social Choice,” Sep. 2020 (in Japanese)
+- **Market Design for Resource Exchange**. Interdisciplinary Workshop on Swarm Mathematics (A Scientific Seminar Organized by TOYOTA), Nov. 2018 (in Japanese)
+- **Fairness and False-name-proofness in Randomized Allocation of a Divisible Good**. Dagstuhl Seminar 16232: Fair Division, Jun 2016
