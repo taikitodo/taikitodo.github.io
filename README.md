@@ -5,8 +5,10 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
 [researchmap](https://researchmap.jp/).
 
-\**Contact Information**:
+<!--
+**Contact Information**:
 \For more details, my CV is available upon request; please contact me.
+-->
 
 # News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
