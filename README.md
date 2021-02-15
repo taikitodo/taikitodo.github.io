@@ -13,7 +13,7 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 # News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
 - I'm participating in [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) of Kyushu University as a trainee. (Aug. 1, 2020)
-- [A new research project on multi-agent optimization](https://agent.inf.kyushu-u.ac.jp/20H00587/), under the support of JSPS Grant-in-Aid for Scientific Research (A), has just been launched. (Apr. 1, 2020)
+- [A new JSPS research project on multi-agent optimization](https://agent.inf.kyushu-u.ac.jp/20H00587/) has just been launched. (Apr. 1, 2020)
 
 - - -
 
@@ -21,7 +21,7 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 - (2013.12 -- present) Assistant Professor, Kyushu University, Japan
 - (2017.06 -- 2020.03) Visiting Scientist, RIKEN AIP, Japan
 - (2016.08 -- 2017.07) Invited Professor, Paris-Dauphine University, France
-- (2016.09 -- 2017.02) Visiting Scholar, City University of Hong Kong, Hong Kong SAR, China
+- (2016.09 -- 2017.02) Visiting Scholar, City University of Hong Kong, Hong Kong SAR
 - (2013.04 -- 2013.11) Postdoctoral Researcher, Kyushu University, Japan
 - (2012.04 -- 2013.03) Postdoctoral Associate, Duke University, USA
 - (2010.04 -- 2013.03) JSPS Research Fellow, Kyushu University, USA
