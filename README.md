@@ -32,7 +32,7 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 - (2005.04 -- 2008.03) Undergraduate Student, School of EECS, Kyushu University
 
 # Selected Publications
-To see a full list of my publications, please refer to [my DBLP entry](https://dblp.org/pid/67/7117.html):
+To see a full list of my publications, please refer to [my DBLP entry](https://dblp.org/pid/67/7117.html) and/or [my Google Scholar page](https://scholar.google.com/citations?user=aakxNAIAAAAJ):
 - Mechanism Design for Housing Markets over Social Networks. AAMAS-21. (with Takehiro Kawasaki, Ryoji Wada, and Makoto Yokoo)
 - Strategy-proof and non-wasteful multi-unit auction via social network. AAAI-20. (with Takehiro Kawasaki, Nathanael Barrot, Seiji Takanashi, and Makoto Yokoo)
 - A Complexity Approach for Core-Selecting Exchange under Conditionally Lexicographic Preferences. Journal of Artificial Intelligence Research (JAIR), 2018. (with Julien Lesca, Etsushi Fujita, Akihisa Sonoda, and Makoto Yokoo)
