@@ -1,4 +1,3 @@
-# About
 I'm an assistant professor at Kyushu University.
 
 # Recent Activities
