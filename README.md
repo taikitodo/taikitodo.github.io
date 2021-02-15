@@ -1,6 +1,6 @@
 ---
-title: Taiki Todo
-description: Assistant Professor at Kyushu University
+#title: Taiki Todo
+#description: Assistant Professor at Kyushu University
 ---
 
 # About
