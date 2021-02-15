@@ -1,8 +1,3 @@
----
-#title: Taiki Todo
-#description: Assistant Professor at Kyushu University
----
-
 # About
 I'm an assistant professor at Kyushu University.
 
