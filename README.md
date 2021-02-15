@@ -6,7 +6,7 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 - [A new research project on multi-agent optimization](https://agent.inf.kyushu-u.ac.jp/20H00587/), under the support of JSPS Grant-in-Aid for Scientific Research (A), has just been launched. (Apr. 1, 2020)
 
 # Selected Publications
-To see a full list of my publications, please go to [my DBLP entry](https://dblp.org/pid/67/7117.html):
+To see a full list of my publications, please refer to [my DBLP entry](https://dblp.org/pid/67/7117.html):
 - Mechanism Design for Housing Markets over Social Networks. AAMAS-21.
 - Strategy-proof and non-wasteful multi-unit auction via social network. AAAI-20.
 - A Complexity Approach for Core-Selecting Exchange under Conditionally Lexicographic Preferences. Journal of Artificial Intelligence Research (JAIR), 2018.
@@ -14,4 +14,6 @@ To see a full list of my publications, please go to [my DBLP entry](https://dblp
 - Facility Location Game with Fractional Preferences. AAAI-18.
 
 # Honors and Awards
-- I became a senior member of IPSJ
+- I became [a senior member of IPSJ](http://www.ipsj.or.jp/annai/aboutipsj/seniormember/seniormember.html).
+- I gave an early career spotlight talk at [IJCAI-20](https://ijcai20.org/).
+- I gave an invited talk at [PRIMA-20](http://uchiya.web.nitech.ac.jp/prima2020/).
