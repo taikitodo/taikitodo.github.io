@@ -28,7 +28,7 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 
 # Education
 - (2010.04 -- 2012.03) Ph.D. Student, Graduate School of ISEE, Kyushu University
-- (2008.04 -- 2010.03) MS.c Student, Graduate School of ISEE, Kyushu University
+- (2008.04 -- 2010.03) M.Sc. Student, Graduate School of ISEE, Kyushu University
 - (2005.04 -- 2008.03) Undergraduate Student, School of EECS, Kyushu University
 
 # Selected Publications
