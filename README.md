@@ -1,4 +1,4 @@
-I am an assistant professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. 
+I am an assistant professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. I am belonging to [the multi-agent laboratory](https://agent.inf.kyushu-u.ac.jp).
 
 # News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
