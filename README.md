@@ -12,6 +12,9 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 
 # News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
+- I gave an early career spotlight talk at [IJCAI-20](https://ijcai20.org/).
+- I gave an invited talk at [PRIMA-20](http://uchiya.web.nitech.ac.jp/prima2020/).
+- I became [a senior member of IPSJ](http://www.ipsj.or.jp/annai/aboutipsj/seniormember/seniormember.html).
 - I'm participating in [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) as a trainee. (Aug. 1, 2020)
 - [A new research project on multi-agent optimization](https://agent.inf.kyushu-u.ac.jp/20H00587/) has been launched. (Apr. 1, 2020)
 
@@ -39,7 +42,5 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 - Service Exchange Problem. IJCAI-ECAI-18. (with Julien Lesca)
 - Facility Location Game with Fractional Preferences. AAAI-18. (with Ken Fong, Minming Li, Pinyan Lu, and Makoto Yokoo)
 
-# Honors and Awards
-- I became [a senior member of IPSJ](http://www.ipsj.or.jp/annai/aboutipsj/seniormember/seniormember.html).
-- I gave an early career spotlight talk at [IJCAI-20](https://ijcai20.org/).
-- I gave an invited talk at [PRIMA-20](http://uchiya.web.nitech.ac.jp/prima2020/).
+# Selected Talks
+- TBA
