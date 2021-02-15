@@ -1,4 +1,4 @@
-<img style="float:left; width:30%; padding-right:10px;" src="0CA2D243-FB59-4E77-9A62-49973F6A3F42.jpeg" />
+<img style="float:left; width:30%; padding-right:20px;" src="0CA2D243-FB59-4E77-9A62-49973F6A3F42.jpeg" />
 I am an assistant professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. My research focuses on algorithmic aspects of mechanism design, including resource allocations and social choice. I am belonging to [the multi-agent laboratory](https://agent.inf.kyushu-u.ac.jp). Further information on my research is found at 
 [Researcher Database at Kyushu University](https://hyoka.ofc.kyushu-u.ac.jp/search/details/K005086/english.html), 
 [Google Scholar](https://scholar.google.co.jp/citations?user=aakxNAIAAAAJ),
