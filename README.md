@@ -10,7 +10,7 @@ For more details, my CV is available upon request; please contact me by email (t
 - I'm participating in [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) of Kyushu University as a trainee. (Aug. 1, 2020)
 - [A new research project on multi-agent optimization](https://agent.inf.kyushu-u.ac.jp/20H00587/), under the support of JSPS Grant-in-Aid for Scientific Research (A), has just been launched. (Apr. 1, 2020)
 
-# Career
+# Work Experiences
 - (2013.12 -- present) Assistant Professor, Kyushu University, Japan
 - (2017.06 -- 2020.03) Visiting Scientist, RIKEN AIP, Japan
 - (2016.08 -- 2017.07) Invited Professor, Paris-Dauphine University, France
