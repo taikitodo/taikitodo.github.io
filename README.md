@@ -1,5 +1,5 @@
 I am an assistant professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. My research focuses on algorithmic aspects of mechanism design, including resource allocations and social choice. I am belonging to [the multi-agent laboratory](https://agent.inf.kyushu-u.ac.jp). Further information on my research is found at 
-[Researcher Database at Kyushu University](taikitodo.github.io), 
+[Researcher Database at Kyushu University](https://hyoka.ofc.kyushu-u.ac.jp/search/details/K005086/english.html), 
 [Google Scholar](https://scholar.google.co.jp/citations?user=aakxNAIAAAAJ),
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
 [researchmap](https://researchmap.jp/).
@@ -26,11 +26,11 @@ For more details, my CV is available upon request; please contact me by email (t
 
 # Selected Publications
 To see a full list of my publications, please refer to [my DBLP entry](https://dblp.org/pid/67/7117.html):
-- Mechanism Design for Housing Markets over Social Networks. AAMAS-21.
-- Strategy-proof and non-wasteful multi-unit auction via social network. AAAI-20.
-- A Complexity Approach for Core-Selecting Exchange under Conditionally Lexicographic Preferences. Journal of Artificial Intelligence Research (JAIR), 2018.
-- Service Exchange Problem. IJCAI-ECAI-18.
-- Facility Location Game with Fractional Preferences. AAAI-18.
+- Mechanism Design for Housing Markets over Social Networks. AAMAS-21. (with Takehiro Kawasaki, Ryoji Wada, and Makoto Yokoo)
+- Strategy-proof and non-wasteful multi-unit auction via social network. AAAI-20. (with Takehiro Kawasaki, Nathanael Barrot, Seiji Takanashi, and Makoto Yokoo)
+- A Complexity Approach for Core-Selecting Exchange under Conditionally Lexicographic Preferences. Journal of Artificial Intelligence Research (JAIR), 2018. (with Julien Lesca, Etsushi Fujita, Akihisa Sonoda, and Makoto Yokoo)
+- Service Exchange Problem. IJCAI-ECAI-18. (with Julien Lesca)
+- Facility Location Game with Fractional Preferences. AAAI-18. (with Ken Fong, Minming Li, Pinyan Lu, and Makoto Yokoo)
 
 # Honors and Awards
 - I became [a senior member of IPSJ](http://www.ipsj.or.jp/annai/aboutipsj/seniormember/seniormember.html).
