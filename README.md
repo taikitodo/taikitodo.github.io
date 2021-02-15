@@ -5,13 +5,15 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
 [researchmap](https://researchmap.jp/).
 
-**Contact Information**:
-For more details, my CV is available upon request; please contact me.
+\**Contact Information**:
+\For more details, my CV is available upon request; please contact me.
 
 # News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
 - I'm participating in [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) of Kyushu University as a trainee. (Aug. 1, 2020)
 - [A new research project on multi-agent optimization](https://agent.inf.kyushu-u.ac.jp/20H00587/), under the support of JSPS Grant-in-Aid for Scientific Research (A), has just been launched. (Apr. 1, 2020)
+
+- - -
 
 # Work Experiences
 - (2013.12 -- present) Assistant Professor, Kyushu University, Japan
