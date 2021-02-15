@@ -1,4 +1,8 @@
-I am an assistant professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. I am belonging to [the multi-agent laboratory](https://agent.inf.kyushu-u.ac.jp).
+I am an assistant professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. My research focuses on algorithmic aspects of mechanism design, including resource allocations and social choice. I am belonging to [the multi-agent laboratory](https://agent.inf.kyushu-u.ac.jp). Further information on my research is found at 
+[Researcher Database at Kyushu University](taikitodo.github.io), 
+[Google Scholar](https://scholar.google.co.jp/citations?user=aakxNAIAAAAJ),
+[DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
+[researchmap](https://researchmap.jp/).
 
 # News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
