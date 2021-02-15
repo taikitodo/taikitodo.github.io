@@ -4,7 +4,9 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 [Google Scholar](https://scholar.google.co.jp/citations?user=aakxNAIAAAAJ),
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
 [researchmap](https://researchmap.jp/).
-For more details, my CV is available upon request; please contact me by email (todo [at] inf [dot] kyushu-u [dot] ac [dot] jp).
+
+**Contact Information**:
+For more details, my CV is available upon request; please contact me.
 
 # News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
