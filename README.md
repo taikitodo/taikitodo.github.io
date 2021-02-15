@@ -24,7 +24,7 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 - (2016.09 -- 2017.02) Visiting Scholar, City University of Hong Kong, Hong Kong SAR
 - (2013.04 -- 2013.11) Postdoctoral Researcher, Kyushu University, Japan
 - (2012.04 -- 2013.03) Postdoctoral Associate, Duke University, USA
-- (2010.04 -- 2013.03) JSPS Research Fellow, Kyushu University, USA
+- (2010.04 -- 2013.03) JSPS Research Fellow, Kyushu University, Japan
 
 # Education
 - (2010.04 -- 2012.03) Ph.D. Student, Graduate School of ISEE, Kyushu University
