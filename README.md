@@ -1,6 +1,6 @@
 <img style="float:left; width:30%; margin:0px 10px 0px 0px;" src="0CA2D243-FB59-4E77-9A62-49973F6A3F42.jpeg" />
-I am an assistant professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. My research focuses on algorithmic aspects of mechanism design, including resource allocations and social choice. I am belonging to [the multi-agent laboratory](https://agent.inf.kyushu-u.ac.jp). Further information on my research is found at 
-[Researcher Database at Kyushu University](https://hyoka.ofc.kyushu-u.ac.jp/search/details/K005086/english.html), 
+I am an assistant professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. My research focuses on algorithmic aspects of mechanism design, including resource allocations and social choice. I am belonging to [the Multi-Agent Laboratory](https://agent.inf.kyushu-u.ac.jp). Further information on my research is found at 
+[Kyushu University Researcher Database](https://hyoka.ofc.kyushu-u.ac.jp/search/details/K005086/english.html), 
 [Google Scholar](https://scholar.google.co.jp/citations?user=aakxNAIAAAAJ),
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
 [researchmap](https://researchmap.jp/).
@@ -8,7 +8,6 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 [CV](cv-202102.pdf) (updated on Feb. 16, 2021)
 <!--
 **Contact Information**:
-\For more details, my CV is available upon request; please contact me.
 -->
 
 # News
