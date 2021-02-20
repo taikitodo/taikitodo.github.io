@@ -20,20 +20,6 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 
 - - -
 
-# Work Experiences
-- (2013.12 -- present) Assistant Professor, Kyushu University, Japan
-- (2017.06 -- 2020.03) Visiting Scientist, RIKEN AIP, Japan
-- (2016.08 -- 2017.07) Invited Professor, Paris-Dauphine University, France
-- (2016.09 -- 2017.02) Visiting Scholar, City University of Hong Kong, Hong Kong SAR
-- (2013.04 -- 2013.11) Postdoctoral Researcher, Kyushu University, Japan
-- (2012.04 -- 2013.03) Postdoctoral Associate, Duke University, USA
-- (2010.04 -- 2013.03) JSPS Research Fellow, Kyushu University, Japan
-
-# Education
-- (2010.04 -- 2012.03) Ph.D. Student, Graduate School of ISEE, Kyushu University
-- (2008.04 -- 2010.03) M.Sc. Student, Graduate School of ISEE, Kyushu University
-- (2005.04 -- 2008.03) Undergraduate Student, School of EECS, Kyushu University
-
 # Selected Publications
 To see a full list of my publications, please refer to [my DBLP entry](https://dblp.org/pid/67/7117.html) and/or [my Google Scholar page](https://scholar.google.com/citations?user=aakxNAIAAAAJ):
 - **Mechanism Design for Housing Markets over Social Networks**. AAMAS-21. (with Takehiro Kawasaki, Ryoji Wada, and Makoto Yokoo)
@@ -48,3 +34,22 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 - **Algorithmic Game Theory for Designing Voting Rules**. FIT 2020 Special Session “Computational Approach for Social Choice,” Sep. 2020 (in Japanese)
 - **Market Design for Resource Exchange**. Interdisciplinary Workshop on Swarm Mathematics (A Scientific Seminar Organized by TOYOTA), Nov. 2018 (in Japanese)
 - **Fairness and False-name-proofness in Randomized Allocation of a Divisible Good**. Dagstuhl Seminar 16232: Fair Division, Jun. 2016
+
+# Professional Services
+- Journal Reviews: AIJ, JAIR, JAAMAS, SCW, MSS, IPL
+- Conference Senior PC: IJCAI-21, AAAI-21, AAMAS-20, AAAI-20, AAMAS-19
+
+# Work Experiences
+- (2013.12 -- present) Assistant Professor, Kyushu University, Japan
+- (2017.06 -- 2020.03) Visiting Scientist, RIKEN AIP, Japan
+- (2016.08 -- 2017.07) Invited Professor, Paris-Dauphine University, France
+- (2016.09 -- 2017.02) Visiting Scholar, City University of Hong Kong, Hong Kong SAR
+- (2013.04 -- 2013.11) Postdoctoral Researcher, Kyushu University, Japan
+- (2012.04 -- 2013.03) Postdoctoral Associate, Duke University, USA
+- (2010.04 -- 2013.03) JSPS Research Fellow, Kyushu University, Japan
+
+# Education
+- (2010.04 -- 2012.03) Ph.D. Student, Graduate School of ISEE, Kyushu University
+- (2008.04 -- 2010.03) M.Sc. Student, Graduate School of ISEE, Kyushu University
+- (2005.04 -- 2008.03) Undergraduate Student, School of EECS, Kyushu University
+
