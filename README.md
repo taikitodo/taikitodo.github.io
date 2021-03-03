@@ -10,16 +10,16 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 <!--
 **Contact Information**:
 -->
-# Contact Information
+## Contact Information
 Room 825, West 2 Building <br>
 Kyushu University Ito Campus <br>
 Motooka 744, Nishi-Ward, Fukuoka-City <br> 
 Fukuoka Prefecture, 819-0395 Japan <br>
 Email: todo at inf dot kyushu-u dot ac dot jp <br>
-Phone: +81 - 92 - 802 - 3576 
+Tel: +81-92-802-3576 
 
 
-# News
+## News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
 - I gave an early career spotlight talk at [IJCAI-20](https://ijcai20.org/). (Jan. 12, 2020)
 - I gave an invited talk at [PRIMA-20](http://uchiya.web.nitech.ac.jp/prima2020/). (Nov. 20, 2020)
