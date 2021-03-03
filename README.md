@@ -10,7 +10,7 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 <!--
 **Contact Information**:
 -->
-#Contact Information
+# Contact Information
 Room 825, West 2 Building 
 Kyushu University Ito Campus 
 Motooka 744, Nishi-Ward, Fukuoka-City 
