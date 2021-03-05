@@ -21,7 +21,7 @@ Tel: +81-92-802-3576
 
 ## News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
-- I gave an early career spotlight talk at [IJCAI-20](https://ijcai20.org/). (Jan. 12, 2020)
+- I gave an early career spotlight talk at [IJCAI-20](https://ijcai20.org/). (Jan. 12, 2021)
 - I gave an invited talk at [PRIMA-20](http://uchiya.web.nitech.ac.jp/prima2020/). (Nov. 20, 2020)
 - I became [a senior member of IPSJ](http://www.ipsj.or.jp/annai/aboutipsj/seniormember/seniormember.html). (Sep. 25, 2020)
 - I'm participating in [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) as a trainee. (Aug. 1, 2020)
