@@ -47,6 +47,7 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 # Professional Services
 - Journal Reviews: AIJ, JAIR, JAAMAS, SCW, MSS, IPL
 - Conference Senior PC: IJCAI-21, AAAI-21, AAMAS-20, AAAI-20, AAMAS-19
+- Conference Auxiliary Reviewer: FOCS-20, SODA-20, WINE-16
 
 # Work Experiences
 - (2013.12 -- present) Assistant Professor, Kyushu University, Japan
