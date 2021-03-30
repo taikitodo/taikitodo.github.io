@@ -12,14 +12,13 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 -->
 ## Contact Information
 W2-825, Kyushu University Ito Campus <br/>
+Fukuoka, Japan <br/>
+Email: todo at inf dot kyushu-u dot ac dot jp <br/>
+Tel: +81-92-802-3576 
 <!-- Room 825, West 2 Building <br> 
 Kyushu University Ito Campus <br>
 Motooka 744, Nishi-Ward, Fukuoka-City <br>  
 Fukuoka Prefecture, 819-0395 Japan <br> -->
-Fukuoka, Japan <br/>
-Email: todo at inf dot kyushu-u dot ac dot jp <br/>
-Tel: +81-92-802-3576 
-
 
 ## News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
