@@ -1,5 +1,5 @@
 <img style="float:left; width:20%; margin:0px 25px 0px 0px;" src="0CA2D243-FB59-4E77-9A62-49973F6A3F42.jpeg" />
-I am an assistant professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. My research focuses on algorithmic aspects of mechanism design, including resource allocations and social choice. I am belonging to [the Multi-Agent Laboratory](https://agent.inf.kyushu-u.ac.jp). Further information on my research is found at 
+I am an associate professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. My research focuses on algorithmic aspects of mechanism design, including resource allocations and social choice. I am belonging to [the Multi-Agent Laboratory](https://agent.inf.kyushu-u.ac.jp). Further information on my research is found at 
 [Kyushu University Researcher Database](https://hyoka.ofc.kyushu-u.ac.jp/search/details/K005086/english.html), 
 [Google Scholar](https://scholar.google.co.jp/citations?user=aakxNAIAAAAJ),
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
@@ -11,10 +11,10 @@ I am an assistant professor in the Department of Informatics, and an affiliate f
 **Contact Information**:
 -->
 ## Contact Information
-W2-825, Kyushu University Ito Campus <br/>
+W2-850, Kyushu University Ito Campus <br/>
 Fukuoka, Japan <br/>
 Email: todo at inf dot kyushu-u dot ac dot jp <br/>
-Tel: +81-92-802-3576 
+Tel: +81-92-802-3590 
 <!-- Room 825, West 2 Building <br> 
 Kyushu University Ito Campus <br>
 Motooka 744, Nishi-Ward, Fukuoka-City <br>  
@@ -51,7 +51,8 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 - Conference Auxiliary Reviewer: FOCS-20, SODA-20, WINE-16
 
 # Work Experiences
-- (2013.12 -- present) Assistant Professor, Kyushu University, Japan
+- (2021.07 -- present) Associate Professor, Kyushu University, Japan
+- (2013.12 -- 2021.06) Assistant Professor, Kyushu University, Japan
 - (2017.06 -- 2020.03) Visiting Scientist, RIKEN AIP, Japan
 - (2016.08 -- 2017.07) Invited Professor, Paris-Dauphine University, France
 - (2016.09 -- 2017.02) Visiting Scholar, City University of Hong Kong, Hong Kong SAR
