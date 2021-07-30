@@ -65,4 +65,5 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 - (2010.04 -- 2012.03) Ph.D. Student, Graduate School of ISEE, Kyushu University
 - (2008.04 -- 2010.03) M.Sc. Student, Graduate School of ISEE, Kyushu University
 - (2005.04 -- 2008.03) Undergraduate Student, School of EECS, Kyushu University
+- (2002.04 -- 2005.03) High School Student, Taketa High School of Oita Prefecture
 
