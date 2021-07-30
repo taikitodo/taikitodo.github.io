@@ -5,7 +5,7 @@ I am an associate professor in the Department of Informatics, and an affiliate f
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
 [researchmap](https://researchmap.jp/).
 
-[CV](cv-202107.pdf) (updated on Feb. 16, 2021)
+[CV](cv-202107.pdf) (updated on Jul. 30, 2021)
 
 <!--
 **Contact Information**:
