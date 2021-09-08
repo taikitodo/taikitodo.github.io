@@ -1,5 +1,5 @@
 <img style="float:left; width:20%; margin:0px 25px 0px 0px;" src="0CA2D243-FB59-4E77-9A62-49973F6A3F42.jpeg" />
-I am an associate professor in the Department of Informatics, and an affiliate faculty member of School of Science, at Kyushu University in Japan. My research focuses on algorithmic aspects of mechanism design, including resource allocations and social choice. I am belonging to [the Multi-Agent Laboratory](https://agent.inf.kyushu-u.ac.jp). Further information on my research is found at 
+I am an associate professor in the Department of Informatics, and an affiliate faculty member of both School of Engineering and School of Science, at Kyushu University in Japan. I am belonging to [the Multi-Agent Laboratory](https://agent.inf.kyushu-u.ac.jp), led by Professor Makoto Yokoo. My major research field is multi-agent systems, a subfield of artificial intelligence. More specifically, my research focuses on algorithmic aspects of mechanism design, including resource allocations and social choice. Further information on my research is found at 
 [Kyushu University Researcher Database](https://hyoka.ofc.kyushu-u.ac.jp/search/details/K005086/english.html), 
 [Google Scholar](https://scholar.google.co.jp/citations?user=aakxNAIAAAAJ),
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
