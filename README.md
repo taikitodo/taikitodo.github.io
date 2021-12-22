@@ -22,7 +22,7 @@ Motooka 744, Nishi-Ward, Fukuoka-City <br>
 Fukuoka Prefecture, 819-0395 Japan <br> -->
 
 ### Announcement
-For those who are interested in studying in our group in Kyushu University as a master/doctor's course student, please first contact me with sending your cv and a two-page research statement. Due to too many requests, we're currently not accepting any research student. (Dec 22, 2021)
+For those who are interested in studying in our group in Kyushu University as a master/doctor's course student, please first contact me with sending your cv and a two-page research statement. We are very sorry that currently our group are not accepting any research student, due to too many requests. (Dec 22, 2021)
 
 ## News
 - My homepage is migrated from google sites. (Feb. 15, 2021)
