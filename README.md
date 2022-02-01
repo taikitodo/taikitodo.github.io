@@ -60,6 +60,8 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 - (2017.06 -- 2020.03) Visiting Scientist, RIKEN AIP, Japan
 - (2016.08 -- 2017.07) Invited Professor, Paris-Dauphine University, France
 - (2016.09 -- 2017.02) Visiting Scholar, City University of Hong Kong, Hong Kong SAR
+- (2015.10 -- 2015.12) Visitor, The University of Adelaide, Australia
+- (2015.03 -- 2015.04) Visitor, The University of Adelaide, Australia
 - (2013.04 -- 2013.11) Postdoctoral Researcher, Kyushu University, Japan
 - (2012.04 -- 2013.03) Postdoctoral Associate, Duke University, USA
 - (2010.04 -- 2013.03) JSPS Research Fellow, Kyushu University, Japan
