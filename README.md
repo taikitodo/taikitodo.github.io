@@ -43,11 +43,14 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 - **Facility Location Game with Fractional Preferences**. AAAI-18. (with Ken Fong, Minming Li, Pinyan Lu, and Makoto Yokoo)
 
 # Selected Invited Talks
+- **Housing Markets over Social Networks**. Dagstuhl Seminar 21331: Coalition Games, Aug. 2021 (Invited Participation)
 - **Mechanism Design with Uncertainty**. IJCAI-PRICAI-20 Early Career Spotlight Talk, Jan. 2021
 - **Social Choice with Variable Populations**. PRIMA-20, Nov. 2020
 - **Algorithmic Game Theory for Designing Voting Rules**. FIT 2020 Special Session “Computational Approach for Social Choice,” Sep. 2020 (in Japanese)
 - **Market Design for Resource Exchange**. Interdisciplinary Workshop on Swarm Mathematics (A Scientific Seminar Organized by TOYOTA), Nov. 2018 (in Japanese)
+<!--
 - **Fairness and False-name-proofness in Randomized Allocation of a Divisible Good**. Dagstuhl Seminar 16232: Fair Division, Jun. 2016 (Invited Participation)
+-->
 
 # Professional Services
 - Journal Reviews: AIJ, JAIR, JAAMAS, SCW, MSS, IPL
