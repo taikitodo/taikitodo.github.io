@@ -43,7 +43,7 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 - **Facility Location Game with Fractional Preferences**. AAAI-18. (with Ken Fong, Minming Li, Pinyan Lu, and Makoto Yokoo)
 
 # Selected Invited Talks
-- **Housing Markets over Social Networks**. Dagstuhl Seminar 21331: Coalition Games, Aug. 2021 (Invited Participation)
+- **Housing Markets over Social Networks**. Dagstuhl Seminar 21331: Coalition Formation Games, Aug. 2021 (Invited Participation)
 - **Mechanism Design with Uncertainty**. IJCAI-PRICAI-20 Early Career Spotlight Talk, Jan. 2021
 - **Social Choice with Variable Populations**. PRIMA-20, Nov. 2020
 - **Algorithmic Game Theory for Designing Voting Rules**. FIT 2020 Special Session “Computational Approach for Social Choice,” Sep. 2020 (in Japanese)
