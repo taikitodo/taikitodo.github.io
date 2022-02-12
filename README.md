@@ -3,7 +3,7 @@ I am an associate professor in the Department of Informatics, and an affiliate f
 [Kyushu University Research Activities Database](https://hyoka.ofc.kyushu-u.ac.jp/search/details/K005086/english.html), 
 [Google Scholar](https://scholar.google.co.jp/citations?user=aakxNAIAAAAJ),
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html), and
-[researchmap](https://researchmap.jp/).
+[researchmap](https://researchmap.jp/taikitodo).
 
 [CV](cv-202107.pdf) (updated on Jul. 30, 2021)
 
