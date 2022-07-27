@@ -25,10 +25,10 @@ Fukuoka Prefecture, 819-0395 Japan <br> -->
 For those who are interested in studying in [our group](https://agent.inf.kyushu-u.ac.jp/join-us/) in Kyushu University as a master/doctor's course student, please first contact me with sending your cv and a two-page research statement. We are very sorry that currently our group is not accepting any research student, due to too many requests. (Dec 22, 2021)
 
 ## News
-- [Our paper on facility location games](https://link.springer.com/article/10.1007/s10458-021-09535-5) is published from Autonomous Agents and Multi-Agent Systems (Jan. 22, 2022).
+- I'm serving as a Senior PC Member of both AAAI-23 and AAMAS-23.
+-  [Our paper on facility location games](https://link.springer.com/article/10.1007/s10458-021-09535-5) is published from Autonomous Agents and Multi-Agent Systems (Jan. 22, 2022).
 - My homepage is migrated from google sites. (Feb. 15, 2021)
-- I gave an early career spotlight talk at [IJCAI-20](https://ijcai20.org/). (Jan. 12, 2021)
-- I gave an invited talk at [PRIMA-20](http://uchiya.web.nitech.ac.jp/prima2020/). (Nov. 20, 2020)
+- I gave invited talkss at [IJCAI-20](https://ijcai20.org/) and [PRIMA-20](http://uchiya.web.nitech.ac.jp/prima2020/).
 - I became [a senior member of IPSJ](http://www.ipsj.or.jp/annai/aboutipsj/seniormember/seniormember.html). (Sep. 25, 2020)
 - I'm participating in [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) as a trainee. (Aug. 1, 2020)
 - [A new research project on multi-agent optimization](https://agent.inf.kyushu-u.ac.jp/20H00587/) has been launched. (Apr. 1, 2020)
@@ -56,8 +56,8 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 
 # Professional Services
 - Journal Reviews: AIJ, JAIR, JAAMAS, SCW, MSS, IPL
-- Conference Senior PC: AAAI-22, IJCAI-21, AAAI-21, AAMAS-20, AAAI-20, AAMAS-19
-- Conference Auxiliary Reviewer: FOCS-20, SODA-20, WINE-16
+- Conference Senior PC: AAMAS-23, AAAI-23, AAAI-22, IJCAI-21, AAAI-21, AAMAS-20, AAAI-20, AAMAS-19
+- Conference Auxiliary Reviewer: SODA-23, SAGT-22, FOCS-20, SODA-20, WINE-16
 
 # Work Experiences
 - (2021.07 -- present) Associate Professor, Kyushu University, Japan
