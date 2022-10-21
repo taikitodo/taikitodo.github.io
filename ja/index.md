@@ -6,7 +6,7 @@
 [researchmap](https://researchmap.jp/taikitodo)
 
 [履歴書（英文）](../cv-202107.pdf) （最終更新日：2021年7月）<br/>
-[英語版ページ](../)
+[英語版ページ](https://taikitodo.github.io)
 
 <!--
 **Contact Information**:
