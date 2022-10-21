@@ -58,19 +58,19 @@ Fukuoka Prefecture, 819-0395 Japan <br> -->
 - 国際会議等査読委員： SODA-23, SAGT-22, FOCS-20, SODA-20, WINE-16
 
 # 職歴
-- (2021.07 -- present) Associate Professor, Kyushu University, Japan
-- (2013.12 -- 2021.06) Assistant Professor, Kyushu University, Japan
-- (2017.06 -- 2020.03) Visiting Scientist, RIKEN AIP, Japan
-- (2016.08 -- 2017.07) Invited Professor, Paris-Dauphine University, France
-- (2016.09 -- 2017.02) Visiting Scholar, City University of Hong Kong, Hong Kong SAR
-- (2015.10 -- 2015.12) Visitor, The University of Adelaide, Australia
-- (2015.03 -- 2015.04) Visitor, The University of Adelaide, Australia
-- (2013.04 -- 2013.11) Postdoctoral Researcher, Kyushu University, Japan
-- (2012.04 -- 2013.03) Postdoctoral Associate, Duke University, USA
-- (2010.04 -- 2013.03) JSPS Research Fellow, Kyushu University, Japan
+- (2021.07 -- present) 九州大学 大学院システム情報科学研究院 准教授
+- (2013.12 -- 2021.06) 九州大学 大学院システム情報科学研究院 助教
+- (2017.06 -- 2020.03) 理研AIP 客員研究員
+- (2016.08 -- 2017.07) フランス・パリドフィーヌ大学 招聘教授
+- (2016.09 -- 2017.02) 中国・香港城市大学 訪問研究員
+- (2015.10 -- 2015.12) オーストラリア・アデレード大学 訪問研究員
+- (2015.03 -- 2015.04) オーストラリア・アデレード大学 訪問研究員
+- (2013.04 -- 2013.11) 九州大学 大学院システム情報科学研究院 学術研究員
+- (2012.04 -- 2013.03) アメリカ・デューク大学 ポスドク研究員
+- (2010.04 -- 2013.03) 日本学術振興会 特別研究員
 
 # 学歴
-- (2010.04 -- 2012.03) Ph.D. Student, Graduate School of ISEE, Kyushu University
-- (2008.04 -- 2010.03) M.Sc. Student, Graduate School of ISEE, Kyushu University
-- (2005.04 -- 2008.03) Undergraduate Student, School of EECS, Kyushu University
-- (2002.04 -- 2005.03) High School Student, Taketa High School of Oita Prefecture
+- (2010.04 -- 2012.03) 九州大学 大学院システム情報科学府 博士後期課程
+- (2008.04 -- 2010.03) 九州大学 大学院システム情報科学府 修士課程
+- (2005.04 -- 2008.03) 九州大学工学部 電気情報工学科 学士課程
+- (2002.04 -- 2005.03) 大分県立竹田高等学校
