@@ -33,7 +33,7 @@ Fukuoka Prefecture, 819-0395 Japan <br> -->
 
 - - -
 
-# 代表的な論文
+# 代表論文
 [DBLP](https://dblp.org/pid/67/7117.html) や [Google Scholar](https://scholar.google.com/citations?user=aakxNAIAAAAJ) でも論文リストが確認できますので，興味がございましたらそちらもご覧ください．
 - **Mechanism Design for Housing Markets over Social Networks**. AAMAS-21. (with Takehiro Kawasaki, Ryoji Wada, and Makoto Yokoo)
 - **Strategy-proof and non-wasteful multi-unit auction via social network**. AAAI-20. (with Takehiro Kawasaki, Nathanael Barrot, Seiji Takanashi, and Makoto Yokoo)
