@@ -25,19 +25,16 @@ Fukuoka Prefecture, 819-0395 Japan <br> -->
 現在，研究生の受け入れは行っておりません．マルチエージェント研究室で研究活動を行うことに興味がある方は，修士課程・博士後期課程への入学をご検討ください．
 
 ## 最新情報
-- I received the certificate for the completion of [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) (Sep. 14, 2022)
-- I'm serving as a Senior PC Member of both AAAI-23 and AAMAS-23.
--  [Our paper on facility location games](https://link.springer.com/article/10.1007/s10458-021-09535-5) is published from Autonomous Agents and Multi-Agent Systems (Jan. 22, 2022).
-- My homepage is migrated from google sites. (Feb. 15, 2021)
-- I gave invited talkss at [IJCAI-20](https://ijcai20.org/) and [PRIMA-20](http://uchiya.web.nitech.ac.jp/prima2020/).
-- I became [a senior member of IPSJ](http://www.ipsj.or.jp/annai/aboutipsj/seniormember/seniormember.html). (Sep. 25, 2020)
-<!-- - I'm participating in [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) as a trainee. (Aug. 1, 2020) -->
-- [A new research project on multi-agent optimization](https://agent.inf.kyushu-u.ac.jp/20H00587/) has been launched. (Apr. 1, 2020)
+- [九州大学 ダイバーシティ・スーパーグローバル教員育成研修 (SENTAN-Q)](https://sentan-q.kyushu-u.ac.jp/) を修了しました．(Sep. 14, 2022)
+- 国際会議 AAAI-23 および AAMAS-23 のシニアプログラム委員を務めています．
+- [施設配置ゲームに関する論文](https://link.springer.com/article/10.1007/s10458-021-09535-5) が国際論文誌 Autonomous Agents and Multi-Agent Systems より出版されました．(Jan. 22, 2022)
+- 国際会議 [IJCAI-20](https://ijcai20.org/) および [PRIMA-20](http://uchiya.web.nitech.ac.jp/prima2020/) で招待講演を行いました.
+- [情報処理学会シニア会員](http://www.ipsj.or.jp/annai/aboutipsj/seniormember/seniormember.html) に選ばれました． (Sep. 25, 2020)
 
 - - -
 
 # 代表的な論文
-To see a full list of my publications, please refer to [my DBLP entry](https://dblp.org/pid/67/7117.html) and/or [my Google Scholar page](https://scholar.google.com/citations?user=aakxNAIAAAAJ):
+[DBLP](https://dblp.org/pid/67/7117.html) や [Google Scholar](https://scholar.google.com/citations?user=aakxNAIAAAAJ) でも論文リストが確認できますので，興味がございましたらそちらもご覧ください．
 - **Mechanism Design for Housing Markets over Social Networks**. AAMAS-21. (with Takehiro Kawasaki, Ryoji Wada, and Makoto Yokoo)
 - **Strategy-proof and non-wasteful multi-unit auction via social network**. AAAI-20. (with Takehiro Kawasaki, Nathanael Barrot, Seiji Takanashi, and Makoto Yokoo)
 - **A Complexity Approach for Core-Selecting Exchange under Conditionally Lexicographic Preferences**. Journal of Artificial Intelligence Research (JAIR), 2018. (with Julien Lesca, Etsushi Fujita, Akihisa Sonoda, and Makoto Yokoo)
@@ -56,9 +53,9 @@ To see a full list of my publications, please refer to [my DBLP entry](https://d
 -->
 
 # 学会活動など
-- Journal Reviews: AIJ, JAIR, JAAMAS, SCW, MSS, IPL
-- Conference Senior PC: AAMAS-23, AAAI-23, AAAI-22, IJCAI-21, AAAI-21, AAMAS-20, AAAI-20, AAMAS-19
-- Conference Auxiliary Reviewer: SODA-23, SAGT-22, FOCS-20, SODA-20, WINE-16
+- 論文誌等査読委員： AIJ, JAIR, JAAMAS, SCW, MSS, IPL
+- 国際会議等シニアプログラム委員： AAMAS-23, AAAI-23, AAAI-22, IJCAI-21, AAAI-21, AAMAS-20, AAAI-20, AAMAS-19
+- 国際会議等査読委員： SODA-23, SAGT-22, FOCS-20, SODA-20, WINE-16
 
 # 職歴
 - (2021.07 -- present) Associate Professor, Kyushu University, Japan
