@@ -6,6 +6,7 @@ I am an associate professor in the department of informatics, and an affiliate f
 [researchmap](https://researchmap.jp/taikitodo).
 
 [CV](cv-202107.pdf) (updated on Jul. 30, 2021)
+[Japanese](./ja/)
 
 <!--
 **Contact Information**:
