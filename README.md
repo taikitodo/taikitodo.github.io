@@ -26,7 +26,7 @@ Fukuoka Prefecture, 819-0395 Japan <br> -->
 For those who are interested in studying in [our group](https://agent.inf.kyushu-u.ac.jp/join-us/) in Kyushu University as a master/doctor's course student, please first contact me with sending your cv and a two-page research statement. We are very sorry that currently our group is not accepting any research student, due to too many requests. (Dec 22, 2021)
 
 ## News
-- Our [PRIMA-22](https://prima2022.webs.upv.es) paper is selected as the PRIMA-22 Best Paper Award Runner-Up.
+- Our [PRIMA-22](https://prima2022.webs.upv.es) paper is selected as the Runner-Up for PRIMA-22 Best Paper.
 - I received the certificate for the completion of [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) (Sep. 14, 2022)
 - I'm serving as a Senior PC Member of both AAAI-23 and AAMAS-23.
 -  [Our paper on facility location games](https://link.springer.com/article/10.1007/s10458-021-09535-5) is published from Autonomous Agents and Multi-Agent Systems (Jan. 22, 2022).
