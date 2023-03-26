@@ -1,5 +1,5 @@
 <img style="float:left; width:20%; margin:0px 25px 0px 0px;" src="../0CA2D243-FB59-4E77-9A62-49973F6A3F42.jpeg" />
-東藤大樹，九州大学 大学院システム情報科学研究院 准教授．[マルチエージェント研究室](https://agent.inf.kyushu-u.ac.jp) 共同運営．マルチエージェントシステムやマーケットデザインの研究に従事．人工知能学会，情報処理学会，日本ソフトウェア科学会 各会員． <br/>
+東藤大樹，九州大学 大学院システム情報科学研究院 准教授．[マルチエージェント研究室](https://agent.inf.kyushu-u.ac.jp) 共同運営．マルチエージェントシステムやマーケットデザインの研究に従事．AAAI, ACM, 人工知能学会，情報処理学会，日本ソフトウェア科学会 各会員． <br/>
 [九州大学研究者データベース](https://hyoka.ofc.kyushu-u.ac.jp/search/details/K005086/english.html) --
 [Google Scholar](https://scholar.google.co.jp/citations?user=aakxNAIAAAAJ) --
 [DBLP](https://dblp.org/pers/t/Todo:Taiki.html) --
