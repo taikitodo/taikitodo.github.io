@@ -26,6 +26,7 @@ Fukuoka Prefecture, 819-0395 Japan <br> -->
 現在，研究生の受け入れは行っておりません．マルチエージェント研究室で研究活動を行うことに興味がある方は，修士課程・博士後期課程への入学をご検討ください．
 
 ## 最新情報
+- [PRIMA-22](https://prima2022.webs.upv.es/) 採択論文が Best Paper Award Runner-Up を受賞しました．(Nov. 18, 2022)
 - [九州大学 ダイバーシティ・スーパーグローバル教員育成研修 (SENTAN-Q)](https://sentan-q.kyushu-u.ac.jp/) を修了しました．(Sep. 14, 2022)
 - 国際会議 AAAI-23 および AAMAS-23 のシニアプログラム委員を務めています．
 - [施設配置ゲームに関する論文](https://link.springer.com/article/10.1007/s10458-021-09535-5) が国際論文誌 Autonomous Agents and Multi-Agent Systems より出版されました．(Jan. 22, 2022)
