@@ -26,6 +26,7 @@ Fukuoka Prefecture, 819-0395 Japan <br> -->
 For those who are interested in studying in [our group](https://agent.inf.kyushu-u.ac.jp/join-us/) in Kyushu University as a master/doctor's course student, please first contact me with sending your cv and a two-page research statement. We are very sorry that currently our group is not accepting any research student, due to too many requests. (Dec 22, 2021)
 
 ## News
+- [A new research project on market design and decision theory](https://www.jst.go.jp/souhatsu/call/sel24.html), funded by JST FOREST, will launch on Oct 1, 2025. (Jul. 25, 2025)
 - I'm a member of the Computer Science Group in the ERATO Kojima Market Design Project. (Mar 21, 2024)
 - Our [PRIMA-22](https://prima2022.webs.upv.es) paper is selected as the Runner-Up for PRIMA-22 Best Paper.
 - I received the certificate for the completion of [the SENTAN-Q training program](https://sentan-q.kyushu-u.ac.jp/) (Sep. 14, 2022)
