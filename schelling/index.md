@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Schelling's Segregation Model (JS)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f1220;
+      --panel: #161a2a;
+      --text: #e6e8f0;
+      --muted: #a8b0c0;
+      --accent: #5cc8ff;
+      --danger: #ff6b6b;
+      --success: #51cf66;
+      --line-mean: #51cf66;   /* Mean Like % line */
+      --line-unhappy: #ff6b6b; /* Unhappy count line */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 1200px at 50% 0%, #12162a 0%, var(--bg) 65%);
+      color: var(--text);
+    }
+    h1 { margin: 0 0 16px; font-weight: 700; letter-spacing: 0.2px; }
+    .app {
+      display: grid; gap: 20px;
+      grid-template-columns: 320px 1fr;
+      align-items: start;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .controls .row { margin-bottom: 16px; }
+    .row label {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 14px; color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .value-pill {
+      font-variant-numeric: tabular-nums;
+      background: rgba(92, 200, 255, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(92, 200, 255, 0.35);
+      padding: 2px 8px; border-radius: 999px;
+      font-size: 12px;
+    }
+    input[type="range"] {
+      width: 100%;
+      -webkit-appearance: none; appearance: none;
+      height: 4px; border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), #8a78ff);
+      outline: none; opacity: 0.85;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: #fff; border: 2px solid var(--accent);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+    .buttons {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;
+    }
+    button {
+      padding: 10px 12px; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      cursor: pointer; transition: 0.15s ease;
+    }
+    button:hover { filter: brightness(1.08); }
+    .primary {
+      background: linear-gradient(90deg, var(--accent), #8a78ff);
+      border: none; color: #0b0e1a; font-weight: 600;
+    }
+    .danger { background: rgba(255, 107, 107, 0.2); border-color: rgba(255,107,107,0.35); }
+
+    .stats {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+      margin-top: 12px;
+    }
+    .stat {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 8px 10px;
+      text-align: center;
+    }
+    .stat .label { font-size: 12px; color: var(--muted); }
+    .stat .value { font-size: 16px; font-weight: 700; margin-top: 2px; }
+
+    canvas {
+      width: 100%; height: auto;
+      border-radius: 14px;
+      background: #0a0d18;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .legend {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;
+      font-size: 12px; color: var(--muted);
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      padding: 6px 8px; border-radius: 999px;
+    }
+    .swatch {
+      width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .chart-legend {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px;
+      font-size: 12px; color: var(--muted);
+    }
+    .line-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 8px; border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .line-swatch {
+      width: 16px; height: 3px; border-radius: 2px;
+    }
+
+    .radio-group {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .radio-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px; border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+    }
+    .group-tol-row { margin-bottom: 12px; }
+    .group-tol-label {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px; color: var(--muted); margin-bottom: 6px;
+    }
+    .group-color-dot {
+      display: inline-block; width: 12px; height: 12px;
+      border-radius: 50%; margin-right: 6px; border: 1px solid rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 900px) {
+      .app { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Schelling’s Segregation Model</h1>
+  <div class="app">
+    <!-- Controls -->
+    <div class="card controls">
+      
+      <!-- Chart -->
+      <div class="row" style="margin-bottom: 12px">
+	<div style="margin-bottom: 6px;">
+	    <font style="color: var(--line-unhappy)">Unhappy</font> and <font style="color: var(--line-mean)">Mean Like %</font> vs Steps <!-- </label> -->
+	</div>
+	<!-- <font style="color: var(--line-unhappy)">Unhappy</font> and <font style="color: var(--line-mean)">Mean Like %</font> vs Steps -->
+        <!-- <label>Unhappy & Mean Like % vs Steps</label> -->
+        <canvas id="chart" width="700" height="220"></canvas>
+	<!-- 
+        <div class="chart-legend">
+          <span class="line-chip"><span class="line-swatch" style="background: var(--line-unhappy)"></span>Unhappy (left axis)</span>
+          <span class="line-chip"><span class="line-swatch" style="background: var(--line-mean)"></span>Mean Like % (right axis)</span>
+        </div>
+	-->
+      </div>
+
+      <div class="buttons" style="margin-top: 12px;">
+        <button id="startBtn" class="primary">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="stepBtn">Step</button>
+        <button id="resetBtn" class="danger">Reset</button>
+      </div>
+
+      <div class="stats" style="margin-top: 12px">
+        <div class="stat"><div class="label">Step</div><div id="stepStat" class="value">0</div></div>
+        <div class="stat"><div class="label">Unhappy</div><div id="unhappyStat" class="value">0</div></div>
+        <div class="stat"><div class="label">Vacancies</div><div id="vacancyStat" class="value">0</div></div>
+        <div class="stat"><div class="label">Mean Like %</div><div id="meanLikeStat" class="value">0.0%</div></div>
+      </div>
+
+      <div class="row"  style="margin-top: 12px;">
+        <label>Grid Size <span id="gridSizeVal" class="value-pill">50</span></label>
+        <input id="gridSize" type="range" min="10" max="150" step="1" value="50">
+      </div>
+      <div class="row">
+        <label>Density (% occupied) <span id="densityVal" class="value-pill">90%</span></label>
+        <input id="density" type="range" min="40" max="98" step="1" value="90">
+      </div>
+      <div class="row">
+        <label>Number of Groups <span id="groupsVal" class="value-pill">3</span></label>
+        <input id="groups" type="range" min="2" max="10" step="1" value="3">
+      </div>
+
+      <!-- Tolerance Mode -->
+      <div class="row">
+        <label>Similarity Tolerance Mode</label>
+        <div class="radio-group">
+          <label class="radio-item">
+            <input type="radio" name="tolMode" id="tolIdentical" checked>
+            Identical tolerance
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="tolMode" id="tolDifferent">
+            Different tolerance (per group)
+          </label>
+        </div>
+      </div>
+
+      <!-- Identical tolerance slider -->
+      <div class="row" id="toleranceRow">
+        <label>Similarity Tolerance <span id="toleranceVal" class="value-pill">50%</span></label>
+        <input id="tolerance" type="range" min="0" max="90" step="1" value="50">
+      </div>
+
+      <!-- Per-group tolerance sliders -->
+      <div class="row" id="groupToleranceBlock" style="display:none;">
+        <label>Per-group Tolerance</label>
+        <div id="groupToleranceContainer"></div>
+      </div>
+
+      <!-- Neighbor Mode -->
+      <div class="row">
+        <label>Neighbor Mode</label>
+        <div class="radio-group">
+          <!-- <label class="radio-item"><input type="radio" name="nbrMode" id="neighborMoore"> Moore (8)</label> -->
+          <!-- <label class="radio-item"><input type="radio" name="nbrMode" id="neighborVN"> von Neumann (4)</label> -->
+          <label class="radio-item"><input type="radio" name="nbrMode" id="neighborCheb" checked> Chebyshev (square)</label>
+          <label class="radio-item"><input type="radio" name="nbrMode" id="neighborMan"> Manhattan (diamond)</label>
+        </div>
+      </div>
+      <div class="row" id="radiusRow" style="display:none;">
+        <label>Radius <span id="radiusVal" class="value-pill">2</span></label>
+        <input id="radius" type="range" min="1" max="5" step="1" value="1">
+      </div>
+
+      <!-- Speed slider -->
+      <div class="row">
+        <label>Speed (steps/sec) <span id="speedVal" class="value-pill">30</span></label>
+        <input id="speed" type="range" min="1" max="120" step="1" value="30">
+      </div>
+
+      <div id="legend" class="legend"></div>
+    </div>
+
+    <!-- Grid Canvas -->
+    <div class="card">
+      <canvas id="canvas" width="700" height="700"></canvas>
+    </div>
+  </div>
+
+  <script>
+    // -------------------------------
+    // Utilities
+    // -------------------------------
+    const shuffle = (arr) => {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    };
+    const hsl = (h, s = 70, l = 55) => `hsl(${h}deg ${s}% ${l}%)`;
+
+    // -------------------------------
+    // Model State
+    // -------------------------------
+    const model = {
+      size: 50,
+      density: 0.90,              // 0..1
+      toleranceMode: 'identical', // 'identical' | 'different'
+      tolerance: 0.50,            // 0..1 (for identical mode)
+      tolerances: [],             // per-group 0..1 (for different mode)
+      groups: 3,                  // integer >= 2
+      speed: 30,                  // steps per second
+      neighborMode: 'chebyshev',      // 'moore' | 'vonneumann' | 'chebyshev' | 'manhattan'
+      radius: 1,                  // used when mode is chebyshev or manhattan
+      grid: [],                   // 2D array: -1 empty, 0..groups-1 occupied by group
+      empties: [],                // list of empty coordinates
+      step: 0,
+      running: false,
+      colors: [],
+      history: { steps: [], unhappy: [], meanLike: [] },
+    };
+
+    // -------------------------------
+    // UI elements
+    // -------------------------------
+    const els = {
+      gridSize: document.getElementById('gridSize'),
+      density: document.getElementById('density'),
+      tolIdentical: document.getElementById('tolIdentical'),
+      tolDifferent: document.getElementById('tolDifferent'),
+      toleranceRow: document.getElementById('toleranceRow'),
+      tolerance: document.getElementById('tolerance'),
+      toleranceVal: document.getElementById('toleranceVal'),
+      groupToleranceBlock: document.getElementById('groupToleranceBlock'),
+      groupToleranceContainer: document.getElementById('groupToleranceContainer'),
+      groups: document.getElementById('groups'),
+      speed: document.getElementById('speed'),
+
+      neighborMoore: document.getElementById('neighborMoore'),
+      neighborVN: document.getElementById('neighborVN'),
+      neighborCheb: document.getElementById('neighborCheb'),
+      neighborMan: document.getElementById('neighborMan'),
+      radiusRow: document.getElementById('radiusRow'),
+      radius: document.getElementById('radius'),
+      radiusVal: document.getElementById('radiusVal'),
+
+      gridSizeVal: document.getElementById('gridSizeVal'),
+      densityVal: document.getElementById('densityVal'),
+      groupsVal: document.getElementById('groupsVal'),
+      speedVal: document.getElementById('speedVal'),
+
+      startBtn: document.getElementById('startBtn'),
+      pauseBtn: document.getElementById('pauseBtn'),
+      stepBtn: document.getElementById('stepBtn'),
+      resetBtn: document.getElementById('resetBtn'),
+
+      stepStat: document.getElementById('stepStat'),
+      unhappyStat: document.getElementById('unhappyStat'),
+      vacancyStat: document.getElementById('vacancyStat'),
+      meanLikeStat: document.getElementById('meanLikeStat'),
+
+      legend: document.getElementById('legend'),
+      canvas: document.getElementById('canvas'),
+      ctx: document.getElementById('canvas').getContext('2d'),
+
+      chart: document.getElementById('chart'),
+      chartCtx: document.getElementById('chart').getContext('2d'),
+    };
+
+    const perGroupUI = { sliders: [], valPills: [] };
+
+    // -------------------------------
+    // Colors for groups
+    // -------------------------------
+    function makeColors(k) {
+      const colors = [];
+      for (let i = 0; i < k; i++) {
+        const hue = Math.round((360 / k) * i);
+        colors.push(hsl(hue, 70, 55));
+      }
+      return colors;
+    }
+
+    function renderLegend() {
+      els.legend.innerHTML = '';
+      for (let g = 0; g < model.groups; g++) {
+        const chip = document.createElement('div');
+        chip.className = 'chip';
+        const sw = document.createElement('span');
+        sw.className = 'swatch';
+        sw.style.background = model.colors[g];
+        const lbl = document.createElement('span');
+        lbl.textContent = `Group ${g + 1}`;
+        chip.appendChild(sw); chip.appendChild(lbl);
+        els.legend.appendChild(chip);
+      }
+      const vac = document.createElement('div');
+      vac.className = 'chip';
+      const swE = document.createElement('span');
+      swE.className = 'swatch';
+      swE.style.background = '#0a0d18';
+      const lblE = document.createElement('span');
+      lblE.textContent = 'Vacant';
+      vac.appendChild(swE); vac.appendChild(lblE);
+      els.legend.appendChild(vac);
+    }
+
+    // -------------------------------
+    // Per-group tolerance UI
+    // -------------------------------
+    function buildGroupToleranceUI() {
+      els.groupToleranceContainer.innerHTML = '';
+      perGroupUI.sliders = [];
+      perGroupUI.valPills = [];
+
+      if (!Array.isArray(model.tolerances) || model.tolerances.length !== model.groups) {
+        model.tolerances = Array.from({ length: model.groups }, () => model.tolerance);
+      }
+
+      for (let g = 0; g < model.groups; g++) {
+        const row = document.createElement('div');
+        row.className = 'group-tol-row';
+
+        const label = document.createElement('div');
+        label.className = 'group-tol-label';
+        const left = document.createElement('span');
+        const dot = document.createElement('span');
+        dot.className = 'group-color-dot';
+        dot.style.background = model.colors[g];
+        left.appendChild(dot);
+        left.appendChild(document.createTextNode(`Group ${g + 1} Tolerance`));
+
+        const val = document.createElement('span');
+        val.className = 'value-pill';
+        val.textContent = `${Math.round(model.tolerances[g] * 100)}%`;
+
+        label.appendChild(left);
+        label.appendChild(val);
+
+        const slider = document.createElement('input');
+        slider.type = 'range';
+        slider.min = '0'; slider.max = '90'; slider.step = '1';
+        slider.value = Math.round(model.tolerances[g] * 100).toString();
+
+        slider.addEventListener('input', () => { val.textContent = `${slider.value}%`; });
+        slider.addEventListener('change', () => { model.tolerances[g] = parseInt(slider.value, 10) / 100; });
+
+        row.appendChild(label);
+        row.appendChild(slider);
+        els.groupToleranceContainer.appendChild(row);
+
+        perGroupUI.sliders.push(slider);
+        perGroupUI.valPills.push(val);
+      }
+    }
+
+    function showToleranceModeUI() {
+      if (model.toleranceMode === 'identical') {
+        els.toleranceRow.style.display = '';
+        els.groupToleranceBlock.style.display = 'none';
+      } else {
+        els.toleranceRow.style.display = 'none';
+        els.groupToleranceBlock.style.display = '';
+        buildGroupToleranceUI();
+      }
+    }
+
+    // -------------------------------
+    // Initialization / Reset
+    // -------------------------------
+    function init() {
+      model.size = parseInt(els.gridSize.value, 10);
+      model.density = parseInt(els.density.value, 10) / 100;
+      model.tolerance = parseInt(els.tolerance.value, 10) / 100;
+      model.groups = parseInt(els.groups.value, 10);
+      model.speed = parseInt(els.speed.value, 10);
+      model.radius = parseInt(els.radius.value, 10);
+      model.step = 0;
+
+      model.colors = makeColors(model.groups);
+
+      if (model.toleranceMode === 'different') {
+        if (!Array.isArray(model.tolerances) || model.tolerances.length !== model.groups) {
+          model.tolerances = Array.from({ length: model.groups }, () => model.tolerance);
+        }
+      }
+
+      const N = model.size;
+      model.grid = Array.from({ length: N }, () => Array(N).fill(-1));
+
+      const total = N * N;
+      const numAgents = Math.floor(total * model.density);
+      const coords = [];
+      for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) coords.push([r, c]);
+      shuffle(coords);
+
+      for (let i = 0; i < numAgents; i++) {
+        const [r, c] = coords[i];
+        const g = i % model.groups;
+        model.grid[r][c] = g;
+      }
+
+      model.empties = [];
+      for (let i = numAgents; i < coords.length; i++) model.empties.push(coords[i]);
+
+      renderLegend();
+      showToleranceModeUI();
+      showRadiusUI();
+
+      model.history.steps = [];
+      model.history.unhappy = [];
+      model.history.meanLike = [];
+
+      const { unhappy, meanLike } = measureCurrent();
+      recordPoint(0, unhappy, meanLike);
+      updateStats(unhappy, meanLike);
+      draw();
+      drawChart();
+    }
+
+    // -------------------------------
+    // Neighbor selection UI
+    // -------------------------------
+    function showRadiusUI() {
+      const needsRadius = (model.neighborMode === 'chebyshev' || model.neighborMode === 'manhattan');
+      els.radiusRow.style.display = needsRadius ? '' : 'none';
+    }
+
+    // -------------------------------
+    // Neighborhood
+    // -------------------------------
+    function neighbors(r, c) {
+      const res = [];
+      const N = model.size;
+
+      //if (model.neighborMode === 'moore') {
+      //  // 8 neighbors around (r,c)
+      //  for (let dr = -1; dr <= 1; dr++) {
+      //    for (let dc = -1; dc <= 1; dc++) {
+      //      if (dr === 0 && dc === 0) continue;
+      //      const rr = r + dr, cc = c + dc;
+      //      if (rr >= 0 && rr < N && cc >= 0 && cc < N) res.push([rr, cc]);
+      //    }
+      //  }
+      //  return res;
+      //}
+
+      //if (model.neighborMode === 'vonneumann') {
+      //  // 4 orthogonal neighbors
+      //  const candidates = [[r-1,c],[r+1,c],[r,c-1],[r,c+1]];
+      //  for (const [rr, cc] of candidates) {
+      //    if (rr >= 0 && rr < N && cc >= 0 && cc < N) res.push([rr, cc]);
+      // }
+      //  return res;
+      //}
+
+      const R = model.radius;
+      if (model.neighborMode === 'chebyshev') {
+        // square neighborhood: max(|dr|,|dc|) <= R, excluding self
+        for (let dr = -R; dr <= R; dr++) {
+          for (let dc = -R; dc <= R; dc++) {
+            if (dr === 0 && dc === 0) continue;
+            if (Math.max(Math.abs(dr), Math.abs(dc)) <= R) {
+              const rr = r + dr, cc = c + dc;
+              if (rr >= 0 && rr < N && cc >= 0 && cc < N) res.push([rr, cc]);
+            }
+          }
+        }
+        return res;
+      }
+
+      if (model.neighborMode === 'manhattan') {
+        // diamond neighborhood: |dr| + |dc| <= R, excluding self
+        for (let dr = -R; dr <= R; dr++) {
+          const maxDc = R - Math.abs(dr);
+          for (let dc = -maxDc; dc <= maxDc; dc++) {
+            if (dr === 0 && dc === 0) continue;
+            const rr = r + dr, cc = c + dc;
+            if (rr >= 0 && rr < N && cc >= 0 && cc < N) res.push([rr, cc]);
+          }
+        }
+        return res;
+      }
+
+      return res;
+    }
+
+    function isHappy(r, c, group) {
+      let occupied = 0, similar = 0;
+      for (const [rr, cc] of neighbors(r, c)) {
+        const v = model.grid[rr][cc];
+        if (v !== -1) {
+          occupied++;
+          if (v === group) similar++;
+        }
+      }
+      if (occupied === 0) return true; // convention: isolated agents are happy
+      const frac = similar / occupied;
+      const tol = (model.toleranceMode === 'different') ? model.tolerances[group] : model.tolerance;
+      return frac >= tol;
+    }
+
+    // Mean like % over occupied cells with ≥1 occupied neighbor
+    function computeMeanLikePercent() {
+      let sumFrac = 0;
+      let count = 0;
+      const N = model.size;
+      for (let r = 0; r < N; r++) {
+        for (let c = 0; c < N; c++) {
+          const g = model.grid[r][c];
+          if (g === -1) continue;
+          let occ = 0, sim = 0;
+          for (const [rr, cc] of neighbors(r, c)) {
+            const v = model.grid[rr][cc];
+            if (v !== -1) {
+              occ++;
+              if (v === g) sim++;
+            }
+          }
+          if (occ > 0) { sumFrac += sim / occ; count++; }
+        }
+      }
+      if (count === 0) return 0;
+      return (sumFrac / count) * 100;
+    }
+
+    function measureCurrent() {
+      let unhappy = 0;
+      for (let r = 0; r < model.size; r++) {
+        for (let c = 0; c < model.size; c++) {
+          const g = model.grid[r][c];
+          if (g !== -1 && !isHappy(r, c, g)) unhappy++;
+        }
+      }
+      const meanLike = computeMeanLikePercent();
+      return { unhappy, meanLike };
+    }
+
+    // -------------------------------
+    // Simulation step
+    // -------------------------------
+    function step() {
+      const N = model.size;
+      const unhappyCells = [];
+      for (let r = 0; r < N; r++) {
+        for (let c = 0; c < N; c++) {
+          const g = model.grid[r][c];
+          if (g === -1) continue;
+          if (!isHappy(r, c, g)) unhappyCells.push([r, c]);
+        }
+      }
+
+      if (unhappyCells.length > 0 && model.empties.length > 0) {
+        shuffle(unhappyCells);
+        shuffle(model.empties);
+        const moves = Math.min(unhappyCells.length, model.empties.length);
+        for (let i = 0; i < moves; i++) {
+          const [r1, c1] = unhappyCells[i];
+          const [r2, c2] = model.empties[i];
+          const g = model.grid[r1][c1];
+          model.grid[r1][c1] = -1;
+          model.grid[r2][c2] = g;
+          model.empties[i] = [r1, c1];
+        }
+      }
+
+      model.step++;
+
+      const { unhappy, meanLike } = measureCurrent();
+      updateStats(unhappy, meanLike);
+      recordPoint(model.step, unhappy, meanLike);
+
+      draw();
+      drawChart();
+
+      return unhappy;
+    }
+
+    // -------------------------------
+    // Rendering Grid (unhappy cells slightly lighter)
+    // -------------------------------
+    function draw() {
+      const { ctx, canvas } = els;
+      const N = model.size;
+      const cellW = canvas.width / N;
+      const cellH = canvas.height / N;
+
+      // Clear
+      ctx.fillStyle = '#0a0d18';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Cells
+      for (let r = 0; r < N; r++) {
+        for (let c = 0; c < N; c++) {
+          const v = model.grid[r][c];
+          if (v === -1) continue;
+
+          const x = Math.floor(c * cellW);
+          const y = Math.floor(r * cellH);
+          const w = Math.ceil(cellW);
+          const h = Math.ceil(cellH);
+
+          // base fill with group color
+          ctx.fillStyle = model.colors[v];
+          ctx.fillRect(x, y, w, h);
+
+          // overlay a subtle white tint if cell is unhappy
+          if (!isHappy(r, c, v)) {
+            ctx.fillStyle = 'rgba(255,255,255,0.25)'; // subtle highlight for unhappy cells
+            ctx.fillRect(x, y, w, h); 
+          } else {
+            ctx.fillStyle = 'rgba(0,0,0,0.1)'; // subtle shadow for happy cells
+            ctx.fillRect(x, y, w, h); 
+	  }
+        }
+      }
+
+      // Subtle grid lines
+      ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i <= N; i++) {
+        const y = Math.floor(i * cellH);
+        const x = Math.floor(i * cellW);
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+      }
+    }
+
+    // -------------------------------
+    // Stats display
+    // -------------------------------
+    function updateStats(unhappyCount = null, meanLike = null) {
+      const vacancies = model.empties.length;
+      els.stepStat.textContent = model.step.toString();
+
+      if (unhappyCount === null) {
+        let u = 0;
+        for (let r = 0; r < model.size; r++) {
+          for (let c = 0; c < model.size; c++) {
+            const g = model.grid[r][c];
+            if (g !== -1 && !isHappy(r, c, g)) u++;
+          }
+        }
+        els.unhappyStat.textContent = u.toString();
+      } else {
+        els.unhappyStat.textContent = unhappyCount.toString();
+      }
+
+      els.vacancyStat.textContent = vacancies.toString();
+
+      if (meanLike === null) meanLike = computeMeanLikePercent();
+      els.meanLikeStat.textContent = `${meanLike.toFixed(1)}%`;
+    }
+
+    // -------------------------------
+    // Charting
+    // -------------------------------
+    function recordPoint(step, unhappy, meanLike) {
+      model.history.steps.push(step);
+      model.history.unhappy.push(unhappy);
+      model.history.meanLike.push(meanLike);
+    }
+
+    function drawChart() {
+      const ctx = els.chartCtx;
+      const canvas = els.chart;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#0a0d18';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const pad = { l: 44, r: 44, t: 16, b: 26 };
+      const W = canvas.width, H = canvas.height;
+      const plotW = W - pad.l - pad.r;
+      const plotH = H - pad.t - pad.b;
+
+      const steps = model.history.steps;
+      const unhappy = model.history.unhappy;
+      const meanLike = model.history.meanLike;
+
+      const maxUnhappy = Math.max(1, ...unhappy, 1);
+      const maxStep = Math.max(1, ...steps, 1);
+
+      const x = (s) => pad.l + (steps.length <= 1 ? 0 : (s / maxStep) * plotW);
+      const yLeft = (u) => pad.t + plotH - (u / maxUnhappy) * plotH;
+      const yRight = (m) => pad.t + plotH - (m / 100) * plotH;
+
+      ctx.strokeStyle = 'rgba(255,255,255,0.18)';
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(pad.l, pad.t + plotH); ctx.lineTo(pad.l + plotW, pad.t + plotH); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, pad.t + plotH); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(pad.l + plotW, pad.t); ctx.lineTo(pad.l + plotW, pad.t + plotH); ctx.stroke();
+
+      const tickCount = 4;
+      ctx.fillStyle = 'rgba(255,255,255,0.45)';
+      ctx.font = '12px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial';
+
+      for (let i = 0; i <= tickCount; i++) {
+        const uVal = Math.round((i / tickCount) * maxUnhappy);
+        const y = yLeft(uVal);
+        ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+        ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(pad.l + plotW, y); ctx.stroke();
+        ctx.fillText(uVal.toString(), pad.l - 8, y + 4);
+      }
+      for (let i = 0; i <= tickCount; i++) {
+        const mVal = Math.round((i / tickCount) * 100);
+        const y = yRight(mVal);
+        ctx.fillText(`${mVal}%`, pad.l + plotW + 6, y + 4);
+      }
+      for (let i = 0; i <= tickCount; i++) {
+        const sVal = Math.round((i / tickCount) * maxStep);
+        const xPos = x(sVal);
+        ctx.fillText(sVal.toString(), xPos - 6, pad.t + plotH + 18);
+      }
+
+      if (steps.length > 0) {
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--line-unhappy').trim();
+        ctx.beginPath();
+        for (let i = 0; i < steps.length; i++) {
+          const xi = x(steps[i]);
+          const yi = yLeft(unhappy[i]);
+          if (i === 0) ctx.moveTo(xi, yi); else ctx.lineTo(xi, yi);
+        }
+        ctx.stroke();
+
+        ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--line-mean').trim();
+        ctx.beginPath();
+        for (let i = 0; i < steps.length; i++) {
+          const xi = x(steps[i]);
+          const yi = yRight(meanLike[i]);
+          if (i === 0) ctx.moveTo(xi, yi); else ctx.lineTo(xi, yi);
+        }
+        ctx.stroke();
+      }
+    }
+
+    // -------------------------------
+    // Run loop with speed control
+    // -------------------------------
+    let loopTimer = null;
+    function runLoop() {
+      if (!model.running) return;
+      const delay = Math.max(1, Math.round(1000 / model.speed));
+
+      const tick = () => {
+        const unhappy = step();
+        if (!model.running) return;
+        if (unhappy === 0 || model.empties.length === 0) {
+          model.running = false;
+          if (loopTimer) { clearTimeout(loopTimer); loopTimer = null; }
+          return;
+        }
+        loopTimer = setTimeout(tick, delay);
+      };
+
+      loopTimer = setTimeout(tick, delay);
+    }
+
+    function stopLoop() {
+      model.running = false;
+      if (loopTimer) { clearTimeout(loopTimer); loopTimer = null; }
+    }
+
+    // -------------------------------
+    // Slider value displays (live)
+    // -------------------------------
+    function updateLabels() {
+      els.gridSizeVal.textContent = els.gridSize.value;
+      els.densityVal.textContent = `${els.density.value}%`;
+      els.groupsVal.textContent = els.groups.value;
+      els.speedVal.textContent = els.speed.value;
+      els.toleranceVal.textContent = `${els.tolerance.value}%`;
+      els.radiusVal.textContent = els.radius.value;
+      if (model.toleranceMode === 'different' && perGroupUI.valPills.length) {
+        for (let g = 0; g < perGroupUI.valPills.length; g++) {
+          perGroupUI.valPills[g].textContent = `${perGroupUI.sliders[g].value}%`;
+        }
+      }
+    }
+
+    // -------------------------------
+    // Event listeners
+    // -------------------------------
+    ['input', 'change'].forEach(evt => {
+      els.gridSize.addEventListener(evt, updateLabels);
+      els.density.addEventListener(evt, updateLabels);
+      els.groups.addEventListener(evt, () => {
+        updateLabels();
+        model.groups = parseInt(els.groups.value, 10);
+        model.colors = makeColors(model.groups);
+        renderLegend();
+        if (model.toleranceMode === 'different') {
+          const old = model.tolerances.slice();
+          model.tolerances = Array.from({ length: model.groups }, (_, i) => old[i] ?? model.tolerance);
+          buildGroupToleranceUI();
+        }
+      });
+      els.speed.addEventListener('input', () => {
+        updateLabels();
+        model.speed = parseInt(els.speed.value, 10);
+        if (model.running) {
+          stopLoop();
+          model.running = true;
+          runLoop();
+        }
+      });
+      els.tolerance.addEventListener('input', () => {
+        updateLabels();
+        model.tolerance = parseInt(els.tolerance.value, 10) / 100;
+      });
+      els.tolerance.addEventListener('change', () => {
+        model.tolerance = parseInt(els.tolerance.value, 10) / 100;
+      });
+      els.radius.addEventListener('input', () => {
+        updateLabels();
+        model.radius = parseInt(els.radius.value, 10);
+        // Recompute overlays/stats immediately for visual feedback
+        updateStats();
+        draw();
+      });
+      els.radius.addEventListener('change', () => {
+        model.radius = parseInt(els.radius.value, 10);
+      });
+    });
+
+    // Tolerance mode radio buttons
+    els.tolIdentical.addEventListener('change', () => {
+      if (els.tolIdentical.checked) {
+        model.toleranceMode = 'identical';
+        showToleranceModeUI();
+      }
+    });
+    els.tolDifferent.addEventListener('change', () => {
+      if (els.tolDifferent.checked) {
+        model.toleranceMode = 'different';
+        model.tolerances = Array.from({ length: parseInt(els.groups.value, 10) }, () => parseInt(els.tolerance.value, 10) / 100);
+        showToleranceModeUI();
+      }
+    });
+
+    // Neighbor mode radio buttons
+    //els.neighborMoore.addEventListener('change', () => {
+    //  if (els.neighborMoore.checked) {
+    //    model.neighborMode = 'moore';
+    //    showRadiusUI();
+    //    updateStats(); draw();
+    //  }
+    //});
+    //els.neighborVN.addEventListener('change', () => {
+    //  if (els.neighborVN.checked) {
+    //    model.neighborMode = 'vonneumann';
+    //    showRadiusUI();
+    //    updateStats(); draw();
+    //  }
+    //});
+    els.neighborCheb.addEventListener('change', () => {
+      if (els.neighborCheb.checked) {
+        model.neighborMode = 'chebyshev';
+        showRadiusUI();
+        updateStats(); draw();
+      }
+    });
+    els.neighborMan.addEventListener('change', () => {
+      if (els.neighborMan.checked) {
+        model.neighborMode = 'manhattan';
+        showRadiusUI();
+        updateStats(); draw();
+      }
+    });
+
+    // Buttons
+    els.startBtn.addEventListener('click', () => {
+      if (!model.running) { model.running = true; runLoop(); }
+    });
+    els.pauseBtn.addEventListener('click', () => { stopLoop(); });
+    els.stepBtn.addEventListener('click', () => { stopLoop(); step(); });
+    els.resetBtn.addEventListener('click', () => { stopLoop(); init(); });
+
+    // First load
+    updateLabels();
+    init();
+  </script>
+</body>
+</html>
