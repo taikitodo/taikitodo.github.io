@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- <title>Missionaries & Cannibals – Final Polished Version</title> -->
+<title>宣教師と人食い人種</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #d0e7ff;
+        padding: 20px;
+        text-align: center;
+    }
+    #game {
+        width: 900px;
+        margin: auto;
+        position: relative;
+    }
+    #river {
+        width: 900px;
+        height: 200px;
+        background: #6ec6ff;
+        border-radius: 10px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .bank {
+        width: 200px;
+        height: 200px;
+        background: #c2b280;
+        position: absolute;
+        top: 0;
+    }
+    #leftBank { left: 0; }
+    #rightBank { right: 0; }
+
+    .character {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        transition: all 0.25s ease;
+    }
+    .M { background: #4caf50; }
+    .C { background: #e53935; }
+
+    #boat {
+        width: 120px;
+        height: 40px;
+        background: #8b4513;
+        border-radius: 5px;
+        position: absolute;
+        top: 150px;
+        left: 200px;
+    }
+
+    button {
+        padding: 10px 15px;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    #status {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<!-- <h1>Missionaries & Cannibals – Final Polished Version</h1> -->
+<h1> 宣教師 (Missionaries) と人食い人種 (Cannibals) </h1>
+
+<div id="game">
+    <div id="river">
+        <div id="leftBank" class="bank"></div>
+        <div id="rightBank" class="bank"></div>
+        <div id="boat"></div>
+    </div>
+</div>
+
+<div>
+    <button onclick="load('M')">Load Missionary</button>
+    <button onclick="load('C')">Load Cannibal</button>
+    <button onclick="unload('M')">Unload Missionary</button>
+    <button onclick="unload('C')">Unload Cannibal</button>
+    <button onclick="moveBoat()">Move Boat</button>
+    <button id="resetBtn" onclick="resetGame()">Reset Game</button>
+</div>
+
+<div id="status"></div>
+
+<script>
+let left, right, boat, boatOnLeft, characters, boatElement;
+
+function resetGame() {
+    left = { M: 3, C: 3 };
+    right = { M: 0, C: 0 };
+    boat = { M: 0, C: 0 };
+    boatOnLeft = true;
+
+    document.getElementById("status").innerText = "";
+
+    characters.forEach(ch => ch.side = "L");
+
+    boatElement.style.left = "200px";
+    positionCharacters();
+}
+
+function createCharacters() {
+    const game = document.getElementById("game");
+    characters = [];
+
+    for (let i = 0; i < 3; i++) {
+        let m = document.createElement("div");
+        m.className = "character M";
+        m.innerText = "M";
+        characters.push({ el: m, type: "M", side: "L" });
+        game.appendChild(m);
+
+        let c = document.createElement("div");
+        c.className = "character C";
+        c.innerText = "C";
+        characters.push({ el: c, type: "C", side: "L" });
+        game.appendChild(c);
+    }
+}
+
+function positionCharacters() {
+    let leftM = 0, leftC = 0;
+    let rightM = 0, rightC = 0;
+
+    characters.forEach(ch => {
+        if (ch.side === "L") {
+            if (ch.type === "M") {
+                ch.el.style.left = (20 + leftM * 50) + "px";
+                ch.el.style.top = "20px";
+                leftM++;
+            } else {
+                ch.el.style.left = (20 + leftC * 50) + "px";
+                ch.el.style.top = "90px";
+                leftC++;
+            }
+        } else if (ch.side === "R") {
+            if (ch.type === "M") {
+                ch.el.style.left = (740 + rightM * 50) + "px";
+                ch.el.style.top = "20px";
+                rightM++;
+            } else {
+                ch.el.style.left = (740 + rightC * 50) + "px";
+                ch.el.style.top = "90px";
+                rightC++;
+            }
+        } else if (ch.side === "B") {
+            let passengers = characters.filter(c => c.side === "B");
+            let index = passengers.indexOf(ch);
+            let seatOffset = 10 + index * 50;
+
+            ch.el.style.left = (boatElement.offsetLeft + seatOffset) + "px";
+            ch.el.style.top = (boatElement.offsetTop - 10) + "px";
+        }
+    });
+}
+
+function load(type) {
+    if (boat.M + boat.C >= 2) return;
+
+    let side = boatOnLeft ? "L" : "R";
+    let group = boatOnLeft ? left : right;
+
+    if (group[type] > 0) {
+        group[type]--;
+        boat[type]++;
+
+        let ch = characters.find(c => c.type === type && c.side === side);
+        if (!ch) return;
+        ch.side = "B";
+        positionCharacters();
+    }
+}
+
+function unload(type) {
+    if (boat[type] === 0) return;
+
+    let side = boatOnLeft ? "L" : "R";
+    let group = boatOnLeft ? left : right;
+
+    boat[type]--;
+    group[type]++;
+
+    let ch = characters.find(c => c.type === type && c.side === "B");
+    if (!ch) return;
+    ch.side = side;
+    positionCharacters();
+}
+
+function isValidState(M, C) {
+    return !(M > 0 && C > M);
+}
+
+function checkGameState() {
+    if (!isValidState(left.M, left.C) || !isValidState(right.M, right.C)) {
+        document.getElementById("status").innerText = "❌ Cannibals ate the missionaries!";
+        return;
+    }
+
+    if (right.M === 3 && right.C === 3) {
+        document.getElementById("status").innerText = "🎉 You win!";
+    }
+}
+
+function moveBoat() {
+    if (boat.M + boat.C === 0) return;
+
+    boatOnLeft = !boatOnLeft;
+
+    let targetX = boatOnLeft ? 200 : 580;
+    let startX = boatElement.offsetLeft;
+    let distance = targetX - startX;
+    let duration = 1500;
+    let startTime = performance.now();
+
+    let passengers = characters.filter(c => c.side === "B");
+
+    passengers.forEach(p => p.el.style.transition = "none");
+    boatElement.style.transition = "none";
+
+    function animateBoat(time) {
+        let progress = Math.min((time - startTime) / duration, 1);
+        let newX = startX + distance * progress;
+
+        boatElement.style.left = newX + "px";
+
+        let currentPassengers = characters.filter(c => c.side === "B");
+        currentPassengers.forEach((ch, index) => {
+            let seatOffset = 10 + index * 50;
+            ch.el.style.left = (newX + seatOffset) + "px";
+            ch.el.style.top = (boatElement.offsetTop - 10) + "px";
+        });
+
+        if (progress < 1) {
+            requestAnimationFrame(animateBoat);
+        } else {
+            passengers.forEach(p => p.el.style.transition = "all 0.25s ease");
+
+            let finalPassengers = characters.filter(c => c.side === "B");
+            finalPassengers.forEach(ch => {
+                ch.side = boatOnLeft ? "L" : "R";
+                let group = boatOnLeft ? left : right;
+                group[ch.type]++;
+            });
+
+            boat.M = 0;
+            boat.C = 0;
+
+            positionCharacters();
+            checkGameState();
+        }
+    }
+
+    requestAnimationFrame(animateBoat);
+}
+
+boatElement = document.getElementById("boat");
+createCharacters();
+resetGame();
+</script>
+
+</body>
+</html>
