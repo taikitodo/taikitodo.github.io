@@ -79,7 +79,7 @@
 
 <!-- <h1>Missionaries & Cannibals – Final Polished Version</h1> -->
 <h1> 宣教師 (Missionaries) と人食い人種 (Cannibals) </h1>
-    
+
 <div id="game">
     <div id="river">
         <div id="leftBank" class="bank"></div>
@@ -89,12 +89,20 @@
 </div>
 
 <div>
+  <button id="loadM" onclick="load('M')">Load Missionary</button>
+  <button id="loadC" onclick="load('C')">Load Cannibal</button>
+  <button id="unloadM" onclick="unload('M')">Unload Missionary</button>
+  <button id="unloadC" onclick="unload('C')">Unload Cannibal</button>
+  <button id="moveBoat" onclick="moveBoat()">Move Boat</button>
+  <button id="resetBtn" onclick="resetGame()">Reset Game</button>
+<!--
     <button onclick="load('M')">Load Missionary</button>
     <button onclick="load('C')">Load Cannibal</button>
     <button onclick="unload('M')">Unload Missionary</button>
     <button onclick="unload('C')">Unload Cannibal</button>
     <button onclick="moveBoat()">Move Boat</button>
     <button id="resetBtn" onclick="resetGame()">Reset Game</button>
+    --> 
 </div>
 
 <div id="status"></div>
@@ -102,6 +110,7 @@
 
 <script>
 let left, right, boat, boatOnLeft, characters, boatElement;
+let gameOver = false;
 
 function resetGame() {
     left = { M: 3, C: 3 };
@@ -116,6 +125,8 @@ function resetGame() {
     boatElement.style.left = "200px";
     positionCharacters();
     updateLeftState();
+    gameOver = false;
+    updateButtons();
 }
 
 function createCharacters() {
@@ -188,6 +199,7 @@ function load(type) {
         ch.side = "B";
         positionCharacters();
     }
+    updateButtons();
 }
 
 function unload(type) {
@@ -203,6 +215,7 @@ function unload(type) {
     if (!ch) return;
     ch.side = side;
     positionCharacters();
+    updateButtons();
 }
 
 function isValidState(M, C) {
@@ -212,6 +225,8 @@ function isValidState(M, C) {
 function checkGameState() {
     if (!isValidState(left.M, left.C) || !isValidState(right.M, right.C)) {
         document.getElementById("status").innerText = "❌ Cannibals ate the missionaries!";
+        disableAllExceptReset();   // ← NEW
+        gameOver = true;
         return;
     }
 
@@ -226,6 +241,37 @@ function updateLeftState() {
     const B = boatOnLeft ? 1 : 0;
     document.getElementById("leftState").innerText =
         `Left Bank State: (${M}, ${C}, ${B})`;
+}
+
+function updateButtons() {
+    if (gameOver) return;   // ← NEW: freeze button state
+    
+    const loadMBtn = document.getElementById("loadM");
+    const loadCBtn = document.getElementById("loadC");
+    const unloadMBtn = document.getElementById("unloadM");
+    const unloadCBtn = document.getElementById("unloadC");
+    const moveBoatBtn = document.getElementById("moveBoat");
+
+    const currentBank = boatOnLeft ? left : right;
+
+    // Load buttons
+    loadMBtn.disabled = !(currentBank.M > 0 && boat.M + boat.C < 2);
+    loadCBtn.disabled = !(currentBank.C > 0 && boat.M + boat.C < 2);
+
+    // Unload buttons
+    unloadMBtn.disabled = !(boat.M > 0);
+    unloadCBtn.disabled = !(boat.C > 0);
+
+    // Move boat button
+    moveBoatBtn.disabled = (boat.M + boat.C === 0);
+}
+
+function disableAllExceptReset() {
+    document.getElementById("loadM").disabled = true;
+    document.getElementById("loadC").disabled = true;
+    document.getElementById("unloadM").disabled = true;
+    document.getElementById("unloadC").disabled = true;
+    document.getElementById("moveBoat").disabled = true;
 }
 
 function moveBoat() {
@@ -274,7 +320,8 @@ function moveBoat() {
 
             positionCharacters();
             checkGameState();
-            updateLeftState();   // ← NEW
+	    updateLeftState();   // ← NEW
+	    updateButtons();
         }
     }
 
