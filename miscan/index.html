@@ -97,6 +97,7 @@
 </div>
 
 <div id="status"></div>
+<div id="leftState"></div>
 
 <script>
 let left, right, boat, boatOnLeft, characters, boatElement;
@@ -113,6 +114,7 @@ function resetGame() {
 
     boatElement.style.left = "200px";
     positionCharacters();
+    updateLeftState();
 }
 
 function createCharacters() {
@@ -217,6 +219,14 @@ function checkGameState() {
     }
 }
 
+function updateLeftState() {
+    const M = left.M;
+    const C = left.C;
+    const B = boatOnLeft ? 1 : 0;
+    document.getElementById("leftState").innerText =
+        `Left Bank State: (${M}, ${C}, ${B})`;
+}
+
 function moveBoat() {
     if (boat.M + boat.C === 0) return;
 
@@ -263,6 +273,7 @@ function moveBoat() {
 
             positionCharacters();
             checkGameState();
+            updateLeftState();   // ← NEW
         }
     }
 
