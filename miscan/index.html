@@ -60,13 +60,23 @@
         left: 200px;
     }
 
-    button {
-        border-radius: 5px;
-        padding: 10px 15px;
-        margin: 5px;
-        font-size: 14px;
-        background-color: #e5e9f0;
-    }
+	button {
+    	padding: 10px 15px;
+    	margin: 5px;
+    	font-size: 14px;
+    	transition: background-color 0.2s ease, transform 0.15s ease;
+	}
+
+	button:hover:not(:disabled) {
+ 		background-color: #ddd;
+    	transform: scale(1.03);
+	}
+
+	button:disabled {
+    	opacity: 0.5;
+    	cursor: not-allowed;
+    	transform: none;
+	}
 
     #status, #leftState {
         margin-top: 20px;
