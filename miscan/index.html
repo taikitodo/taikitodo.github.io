@@ -186,7 +186,7 @@ function positionCharacters() {
         } else if (ch.side === "B") {
             let passengers = characters.filter(c => c.side === "B");
             let index = passengers.indexOf(ch);
-            let seatOffset = 10 + index * 50;
+            let seatOffset = 35 + index * 50;
 
             ch.el.style.left = (boatElement.offsetLeft + seatOffset) + "px";
             ch.el.style.top = (boatElement.offsetTop - 10) + "px";
